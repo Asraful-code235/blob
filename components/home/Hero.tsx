@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 
 const blobs = [
   {
-    src: "/icons/blob1.svg",
+    src: "/icons/blob_left.svg",
   },
   {
-    src: "/icons/blob2.svg",
+    src: "/icons/blob_middle.png",
   },
   {
-    src: "/icons/blob3.svg",
+    src: "/icons/blob_right.svg",
   },
 ];
 
@@ -32,41 +32,46 @@ export default function Hero() {
       return [...prevBlobs];
     });
   };
-  return (
-    <div className="h-[60rem] w-full relative flex items-center justify-center max-w-screen-2xl mx-auto">
-      {/* Radial gradient for the container to give a faded look */}
 
-      <div className=" flex flex-col items-center justify-center gap-8 relative">
-        <div className="flex">
+  return (
+    <div className="h-[60rem] w-full relative flex items-center justify-center max-w-screen-2xl mx-auto bg-transparent">
+      <div className="flex flex-col items-center justify-center gap-8 relative ">
+        <div className="flex relative">
           {shiftedBlobs.map((item, index) => (
-            <Image
+            <div
               key={index}
-              src={item.src}
-              alt={`blob-${index}`}
-              className={`${
-                index === 1
-                  ? "w-fit h-[240px] transition-all duration-500 ease-in-out transform translate-y-0"
-                  : "w-[201px] h-[201px] transition-all duration-500 delay-500 ease-out"
-              } z-10`}
-              width={240}
-              height={240}
-            />
+              className={`z-10 rounded-full h-36 w-36 md:h-52 md:w-52 drop-shadow-2xl shadow-2xl ${
+                index === 1 ? "relative h-40 w-40 md:h-60 md:w-60" : "absolute"
+              } h-52 w-52 md:drop-shadow-2xl md:shadow-2xl`}
+              style={{
+                zIndex: index === 1 ? 20 : 10,
+                left: index === 0 ? -120 : index === 2 ? 120 : "auto",
+                right: index === 2 ? -120 : index === 0 ? 120 : "auto",
+              }}
+            >
+              <Image
+                src={item.src}
+                alt={`blob-${index}`}
+                width={240}
+                height={240}
+                className="rounded-full h-full w-full"
+              />
+            </div>
           ))}
         </div>
-
         <span className="blobBg absolute"></span>
-        <h1 className="text-4xl  sm:text-7xl lg:text-[96px] font-bold z-20 text-[#444444]">
+        <h1 className="text-4xl sm:text-7xl lg:text-[96px] font-bold z-20 text-[#444444] bg-transparent">
           Blobbies
         </h1>
-        <p className="text-2xl text-[#C3C2D4] max-w-[528px] text-center z-10">
+        <p className="text-2xl text-[#C3C2D4] max-w-[528px] text-center z-10 bg-transparent">
           “It’s called blob, we are still trying to figure out how it works, the
           technology is centuries ahead of anything we have ever seen” - Albert
           Einstein
         </p>
-        <p className="text-3xl text-[#444444] z-10 lg:mt-10">
+        <p className="text-3xl text-[#444444] z-10 lg:mt-10 bg-transparent">
           A project by <span className="text-[#F5AFDD] text-5xl">Blob</span>
         </p>
-        <p>Scroll to read more</p>
+        <p className="bg-transparent">Scroll to read more</p>
       </div>
     </div>
   );
