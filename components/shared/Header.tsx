@@ -36,7 +36,7 @@ export default function Header() {
           />
         </a>
       </div>
-      <div className="flex items-center gap-3">
+      <div className="sm:flex items-center gap-3 hidden">
         {navLinks.map((item, key) => (
           <a href="" key={key}>
             <Image
@@ -48,6 +48,17 @@ export default function Header() {
             />
           </a>
         ))}
+      </div>
+      <div>
+        <a href="">
+          <Image
+            src={navLinks[2].src}
+            width={32}
+            height={32}
+            alt="navItems"
+            className="w-8 h-8"
+          />
+        </a>
       </div>
     </header>
   );
