@@ -3,12 +3,15 @@ import Image from "next/image";
 const navLinks = [
   {
     src: "/icons/twitter.svg",
+    link: "http://t.me/BlobBlobers",
   },
   {
     src: "/icons/x.svg",
+    link: "https://x.com/NFTblobSol?t=AFk2_y1aM9KumToGX_DuyQ&s=09",
   },
   {
     src: "/icons/owl.svg",
+    link: "https://dexscreener.com/solana/j8kklmuu95eqckc3ew1ulpy7n9gnakl9o7akcwhz3fki",
   },
 ];
 
@@ -38,7 +41,7 @@ export default function Header() {
       </div>
       <div className="sm:flex items-center gap-3 hidden">
         {navLinks.map((item, key) => (
-          <a href="" key={key}>
+          <a href={item.link} target="_blank" key={key}>
             <Image
               src={item.src}
               width={32}
@@ -49,8 +52,8 @@ export default function Header() {
           </a>
         ))}
       </div>
-      <div>
-        <a href="">
+      <div className="flex sm:hidden">
+        <a href={navLinks[2].link} target="_blank">
           <Image
             src={navLinks[2].src}
             width={32}

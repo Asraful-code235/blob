@@ -9,22 +9,22 @@ const accordionContent = [
   {
     id: 1,
     title: "When does minting begin?",
-    des: "Yes. It adheres to the WAI-ARIA design pattern.",
+    des: "Minting is on friday evening",
   },
   {
     id: 2,
     title: "Who can mint one?",
-    des: "Yes. It adheres to the WAI-ARIA design pattern.",
+    des: "Anyone who holds $blob",
   },
   {
     id: 3,
     title: "Why should I hold one?",
-    des: "Yes. It adheres to the WAI-ARIA design pattern.",
+    des: "What you mean? Just blob",
   },
   {
     id: 4,
     title: "What does it cost?",
-    des: "Yes. It adheres to the WAI-ARIA design pattern.",
+    des: "10,000 $BLOB",
   },
 ];
 
