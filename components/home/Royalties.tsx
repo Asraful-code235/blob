@@ -46,7 +46,7 @@ export default function Royalties() {
 
       <div className="w-1/2 md:w-1/4">
         <p className="text-5xl md:text-7xl text-center leading-10">
-          No royalties, we just blob!
+          Fuck it, we just blob!
         </p>
       </div>
     </div>
