@@ -28,7 +28,7 @@ export default function Header() {
           className="w-16 aspect-auto"
         />
         <p className="text-2xl">NFTBLOB</p>
-        <a href="" className="flex items-center gap-2 text-2xl">
+        <a href="https://launchmynft.io/collections/4ypdezSSgTA57RQ7MFmaFEtQrssfzyxpjtcoQ5PmvFsc/yifTrDl9DsX6GDhkpTLv" className="flex items-center gap-2 text-2xl">
           Mint
           <Image
             src={"/icons/arrowright.svg"}
